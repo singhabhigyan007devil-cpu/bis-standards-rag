@@ -121,7 +121,7 @@ def key_check_hits(k, metadata):
       "IS 269" in "IS 269 : 1989"   → True  (correct)
 
     Word-boundary approach:
-      re.search(r"IS\s*269\b") on "IS 2691 : 1988" → no match (correct)
+      re.search(r"IS\\s*269\\b") on "IS 2691 : 1988" -> no match (correct)
       re.search(r"IS\s*269\b") on "IS 269 : 1989"  → match   (correct)
     """
     # Extract the number part from key like "IS 269" → "269"
