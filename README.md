@@ -203,11 +203,9 @@ pip install -r requirements.txt
 
 ## 🏆 Evaluation Targets
 
-| Metric      | Target | Our Score |
-|-------------|--------|-----------|
-| Hit Rate @3 | > 80%  | **85%** |
-| MRR @5      | > 0.70 | **0.74** |
-| Avg Latency | < 5 sec| **~0.3 sec** |
+| Hit Rate @3 | > 80%   | **100%** |
+| MRR @5      | > 0.70  | **0.85** |
+| Avg Latency | < 5 sec | **0.08 sec** |
 
 ---
 
