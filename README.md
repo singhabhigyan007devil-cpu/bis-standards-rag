@@ -18,12 +18,10 @@ your-repo/
 │   ├── ingest.py
 │   ├── rag_pipeline.py
 │   ├── app.py
-│   └── groq.env
+│   
 │
 └── data/                 
-    ├── index.faiss
-    ├── metadata.pkl
-    └── team_results.json ← output of running inference.py on public test set
+    └── public_test_results.json ← output of running inference.py on public test set
 
 ---
 
@@ -62,16 +60,15 @@ Create a file named `groq.env` in the project root:
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-> **Note:** `inference.py` 
+> > **Note:** `inference.py` does not require a Groq API key. It uses only BM25 + FAISS for retrieval with no LLM calls, making it fast and free to run.
 
 ---
 
 ## 🗃️ Step 1 — Build the Index (One-Time)
 
-Run the ingestion pipeline to parse `dataset.pdf` and build the FAISS vector index:
-
+Place `dataset.pdf` in the project root, then run:
 ```bash
-python ingest.py
+python src/ingest.py
 ```
 
 This will:
@@ -95,10 +92,9 @@ Done. 568 vectors saved to 'data/'
 
 ## 🤖 Step 2 — Run Inference (Judge Command)
 
-This is the primary command judges will use for automated scoring:
 
 ```bash
-python inference.py --input public_test_set.json --output team_results.json
+python inference.py --input path/to/input.json --output path/to/output.json
 ```
 
 For the hidden private test set (run by judges):
@@ -136,9 +132,9 @@ Expected output format:
    BIS HACKATHON EVALUATION RESULTS
 ========================================
 Total Queries Evaluated : 10
-Hit Rate @3             : 85.00%    (Target: >80%)
-MRR @5                  : 0.7400    (Target: >0.7)
-Avg Latency             : 0.31 sec  (Target: <5 seconds)
+Hit Rate @3             : 100.00%       (Target: >80%)
+MRR @5                  : 0.8500        (Target: >0.7)
+Avg Latency             : 0.08 sec      (Target: <5 seconds)
 ========================================
 ```
 
