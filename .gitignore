@@ -1,0 +1,30 @@
+# ── API Keys (NEVER upload) ────────────────
+groq.env
+.env
+*.env
+
+# ── Large binary data files (rebuild via ingest.py) ────
+data/index.faiss
+data/metadata.pkl
+
+# ── Dataset PDF (too large for GitHub) ─────
+dataset.pdf
+
+# ── Python cache ────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── Virtual environment ──────────────────────
+venv/
+env/
+.venv/
+
+# ── IDE files ────────────────────────────────
+.vscode/
+.idea/
+
+# ── Windows junk ─────────────────────────────
+Thumbs.db
+desktop.ini
