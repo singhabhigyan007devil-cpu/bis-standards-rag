@@ -15,6 +15,7 @@ st.caption("AI-powered BIS standard discovery for Indian MSEs")
 def load_everything():
     model = SentenceTransformer('all-MiniLM-L6-v2')
     index, metadata = load_index("data/")
+    load_dotenv("groq.env", override=True)
     client = Groq(api_key=os.environ.get("GROQ_API_KEY", ""))
     return model, index, metadata, client
 
