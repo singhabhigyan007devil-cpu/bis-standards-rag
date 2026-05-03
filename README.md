@@ -134,7 +134,7 @@ Expected output format:
 Total Queries Evaluated : 10
 Hit Rate @3             : 100.00%       (Target: >80%)
 MRR @5                  : 0.8500        (Target: >0.7)
-Avg Latency             : 0.08 sec      (Target: <5 seconds)
+Avg Latency             : 0.06 sec      (Target: <5 seconds)
 ========================================
 ```
 
