@@ -4,8 +4,8 @@ groq.env
 *.env
 
 # ── Large binary data files (rebuild via ingest.py) ────
-data/index.faiss
-data/metadata.pkl
+*data/index.faiss
+*data/metadata.pkl
 
 # ── Dataset PDF (too large for GitHub) ─────
 dataset.pdf
