@@ -20,8 +20,10 @@ your-repo/
 │   ├── app.py
 │   
 │
-└── data/                 
-    └── public_test_results.json ← output of running inference.py on public test set
+└── data/
+├── index.faiss            ← pre-built FAISS index (included)
+├── metadata.pkl           ← chunk metadata (included)
+└── public_test_results.json ← output of running inference.py on public test set
 
 ---
 
