@@ -9,7 +9,7 @@ from groq import Groq
 from dotenv import load_dotenv
 import os
 
-load_dotenv(os.path.join(os.path.dirname(__file__), "..", "groq.env"))
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", "groq.env"), override=True)
 
 # ── Load index ────────────────────────────────────────────────────────
 def load_index(data_dir="data/"):
