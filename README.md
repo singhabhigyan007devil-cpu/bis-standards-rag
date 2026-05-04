@@ -147,7 +147,7 @@ Avg Latency             : 0.06 sec      (Target: <5 seconds)
 ```bash
 python -m streamlit run src/app.py
 ```
-
+#after typing the command for our streamlit app please wait there for few seconds it will open 
 Then open [http://localhost:8501](http://localhost:8501) in your browser.
 
 > Requires `GROQ_API_KEY` set in `groq.env`.
